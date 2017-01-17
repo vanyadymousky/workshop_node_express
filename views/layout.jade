@@ -1,7 +1,9 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+    body
+        block content
+
+        script(type = 'text/javascript', src = '//localhost:7000/vendor.js')
+        script(type='text/javascript', src='//localhost:7000/app.bundle.js')

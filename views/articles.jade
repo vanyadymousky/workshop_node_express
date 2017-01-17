@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1= title
+    p #{title}
+    each article in articles
+        h1= article.title
+        p= article.text
+        p by
+            b  #{article.author}
+        p Created at #{article.createdAt}
+        p comments:
+        ul
+            each comment in article.comments
+                li
+                    h3= comment.text
+                    p= comment.author
+
+        div
+            form(action='/articles/add-comment',method='post')
+                input(type='hidden',name='articleId',value=article._id)
+                div
+                    input(type='text',name='author',placeholder='who you are?')
+                div
+                    input(type='text',name='text',placeholder='comment text...')
+                div
+                    button(type='submit') Add comment

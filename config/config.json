@@ -1,0 +1,5 @@
+{
+  "database": {
+    "host": "mongodb://ivandymousky:12345678@ds135818.mlab.com:35818/blog_workshop"
+  }
+}

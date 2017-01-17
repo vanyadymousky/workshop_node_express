@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    p Hi
+        form(action='/articles/add-article',method='post')
+            div
+                input(type='text',name='title')
+            div
+                input(type='text',name='author')
+            div
+                input(type='text',name='text')
+            div
+                button(type='submit') Add article
